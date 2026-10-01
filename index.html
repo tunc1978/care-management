@@ -44,22 +44,15 @@
     .lang-btn.active { background-color: #ffffff; color: #0f2a3d; border-color: #ffffff; }
     section[id] { scroll-margin-top: 4rem; }
 
-    /* HERO background:
-       Layer 1 = dark overlay (keeps text fully readable)
-       Layer 2 = URL as requested (https://unsplash.com is the Unsplash homepage, not an image file, so browsers cannot paint it)
-       Layer 3 = direct Unsplash image file (elderly care / compassion) that actually renders
-       Layer 4 = solid colour fallback
-       To use a different photo: open it on Unsplash, right-click the image > "Copy image address",
-       and paste that images.unsplash.com link in place of Layer 3. */
-    .hero-bg {
-      background-color: #0f2a3d;
-      background-image:
-        linear-gradient(135deg, rgba(15,42,61,.92) 0%, rgba(26,72,102,.84) 55%, rgba(43,111,158,.74) 100%),
-        url('https://unsplash.com'),
-        url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80');
-      background-size: cover;
-      background-position: center;
+    /* Large colorful flag emojis in the language bar */
+    .flag {
+      font-size: 1.5rem;
+      line-height: 1;
+      vertical-align: middle;
+      margin-right: .25rem;
+      font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
     }
+
     .about-photo {
       background-color: #2b6f9e;
       background-image:
@@ -77,29 +70,18 @@
       background-position: center;
       background-attachment: fixed;
     }
+
+    /* Contact + footer: background images fully removed, clean colour gradients only */
     .contact-bg {
-      background-color: #ffffff;
-      background-image:
-        linear-gradient(180deg, rgba(255,255,255,.90) 0%, rgba(238,246,251,.92) 100%),
-        url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80');
-      background-size: cover;
-      background-position: center;
+      background-color: #eef6fb;
+      background-image: linear-gradient(180deg, #ffffff 0%, #eef6fb 100%);
     }
     .contact-card {
       background-color: #0f2a3d;
-      background-image:
-        linear-gradient(135deg, rgba(15,42,61,.93) 0%, rgba(26,72,102,.88) 100%),
-        url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1400&q=80');
-      background-size: cover;
-      background-position: center;
+      background-image: linear-gradient(135deg, #0f2a3d 0%, #1a4866 100%);
     }
     .footer-bg {
       background-color: #0f2a3d;
-      background-image:
-        linear-gradient(rgba(15,42,61,.96), rgba(15,42,61,.96)),
-        url('https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=1600&q=60');
-      background-size: cover;
-      background-position: center;
     }
     @media (max-width: 768px) { .services-bg { background-attachment: scroll; } }
   </style>
@@ -113,16 +95,21 @@
         <i class="fa-solid fa-globe mr-2"></i> Tuncay ERGİN
       </span>
       <div class="flex flex-wrap gap-2 mx-auto md:mx-0 justify-center" role="group" aria-label="Language selector">
-        <button type="button" data-lang="de" class="lang-btn active px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition">🇩🇪 Deutsch</button>
-        <button type="button" data-lang="en" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition">🇬🇧 English</button>
-        <button type="button" data-lang="fr" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition">🇫🇷 Français</button>
-        <button type="button" data-lang="tr" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition">🇹🇷 Türkçe</button>
+        <button type="button" data-lang="de" class="lang-btn active px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition"><span class="flag">🇩🇪</span> Deutsch</button>
+        <button type="button" data-lang="en" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition"><span class="flag">🇬🇧</span> English</button>
+        <button type="button" data-lang="fr" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition"><span class="flag">🇫🇷</span> Français</button>
+        <button type="button" data-lang="tr" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition"><span class="flag">🇹🇷</span> Türkçe</button>
       </div>
     </div>
   </div>
 
-  <!-- HERO -->
-  <header class="relative hero-bg text-white overflow-hidden">
+  <!-- HERO
+       NOTE: https://unsplash.com is the Unsplash homepage, not an image file, so browsers cannot paint it as a background.
+       The dark overlay + solid colour keep all white text 100% readable either way.
+       To show a real photo: open a photo on Unsplash, right-click it > "Copy image address",
+       and paste that images.unsplash.com link in place of the url('...') below. -->
+  <header class="relative text-white overflow-hidden"
+          style="background-color:#0f2a3d; background-image: linear-gradient(135deg, rgba(15,42,61,.92) 0%, rgba(26,72,102,.84) 55%, rgba(43,111,158,.74) 100%), url('https://unsplash.com'); background-size: cover; background-position: center;">
     <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 20%, #fff 1px, transparent 1px); background-size: 28px 28px;"></div>
     <div class="relative max-w-4xl mx-auto px-6 py-28 sm:py-40 text-center">
       <div class="lang-content active" data-lang="de">
@@ -170,28 +157,28 @@
               <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Über mich</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">Mein Name ist Tuncay ERGİN. Ich bin seit 20 Jahren als Sozialarbeits-Spezialist tätig und habe in dieser Zeit hunderte Familien mit älteren und behinderten Angehörigen in schwierigen Lebenssituationen begleitet.</p>
-              <p class="text-slate-600 leading-relaxed mb-4">15 Jahre lang leitete ich als Geschäftsführer ein privates Pflegezentrum für Menschen mit Behinderungen in der Türkei. Diese Erfahrung hat mir ein tiefes Verständnis für pflegerische, rechtliche und menschliche Bedürfnisse vermittelt.</p>
+              <p class="text-slate-600 leading-relaxed mb-4">15 Jahre lang war ich als Verantwortlicher Manager eines privaten Pflegezentrums für Menschen mit Behinderungen in der Türkei tätig. Diese Erfahrung hat mir ein tiefes Verständnis für pflegerische, rechtliche und menschliche Bedürfnisse vermittelt.</p>
               <p class="text-slate-600 leading-relaxed">Heute unterstütze ich Expats und lokale Anwälte dabei, sicherzustellen, dass ältere und behinderte Angehörige sowie Mandanten in der Türkei würdevoll, sicher und rechtlich korrekt betreut werden.</p>
             </div>
             <div class="lang-content" data-lang="en">
               <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">About Me</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">My name is Tuncay ERGİN. I have worked as a Social Work Specialist for 20 years, guiding hundreds of families with elderly and disabled relatives through challenging life situations.</p>
-              <p class="text-slate-600 leading-relaxed mb-4">For 15 years, I served as General Manager of a private care center for people with disabilities in Turkey. This experience gave me a deep understanding of care, legal, and human needs.</p>
+              <p class="text-slate-600 leading-relaxed mb-4">For 15 years, I served as Responsible Manager of a private care center for people with disabilities in Turkey. This experience gave me a deep understanding of care, legal, and human needs.</p>
               <p class="text-slate-600 leading-relaxed">Today I support expats and local lawyers in ensuring that elderly and disabled relatives and clients in Turkey receive dignified, safe, and legally correct care.</p>
             </div>
             <div class="lang-content" data-lang="fr">
               <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">À propos de moi</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">Je m'appelle Tuncay ERGİN. Je travaille depuis 20 ans en tant que spécialiste du travail social et j'ai accompagné des centaines de familles ayant des proches âgés ou handicapés dans des situations de vie difficiles.</p>
-              <p class="text-slate-600 leading-relaxed mb-4">Pendant 15 ans, j'ai été directeur général d'un centre de soins privé pour personnes en situation de handicap en Turquie. Cette expérience m'a apporté une compréhension approfondie des besoins en matière de soins, de droit et d'humanité.</p>
+              <p class="text-slate-600 leading-relaxed mb-4">Pendant 15 ans, j'ai été directeur responsable d'un centre de soins privé pour personnes en situation de handicap en Turquie. Cette expérience m'a apporté une compréhension approfondie des besoins en matière de soins, de droit et d'humanité.</p>
               <p class="text-slate-600 leading-relaxed">Aujourd'hui, j'aide les expatriés et les avocats locaux à garantir que leurs proches âgés ou handicapés, ainsi que leurs clients en Turquie, bénéficient d'une prise en charge digne, sûre et juridiquement conforme.</p>
             </div>
             <div class="lang-content" data-lang="tr">
               <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Hakkımda</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">Adım Tuncay ERGİN. 20 yıldır Sosyal Hizmet Uzmanı olarak görev yapıyorum ve bu süre boyunca zor yaşam koşullarındaki, yaşlı ve engelli yakınları olan yüzlerce aileye rehberlik ettim.</p>
-              <p class="text-slate-600 leading-relaxed mb-4">15 yıl boyunca Türkiye'de engelli bireylere hizmet veren özel bir bakım merkezinin Genel Müdürlüğünü yaptım. Bu deneyim bana bakım, hukuk ve insani ihtiyaçlar konusunda derin bir anlayış kazandırdı.</p>
+              <p class="text-slate-600 leading-relaxed mb-4">15 yıl boyunca Türkiye'de engelli bireylere hizmet veren özel bir bakım merkezinde Sorumlu Müdür olarak görev yaptım. Bu deneyim bana bakım, hukuk ve insani ihtiyaçlar konusunda derin bir anlayış kazandırdı.</p>
               <p class="text-slate-600 leading-relaxed">Bugün, yurt dışında yaşayan gurbetçilere ve yerel avukatlara, Türkiye'deki yaşlı ve engelli yakınlarının ve müvekkillerinin onurlu, güvenli ve hukuka uygun biçimde bakım görmesini sağlamalarında destek oluyorum.</p>
             </div>
             <div class="mt-8 grid grid-cols-2 gap-4">
@@ -207,10 +194,10 @@
               <div class="bg-brand-50 rounded-xl p-4 text-center">
                 <p class="text-3xl font-bold text-brand-700">15</p>
                 <p class="text-sm text-slate-600">
-                  <span class="lang-content active" data-lang="de">Jahre Geschäftsführung</span>
-                  <span class="lang-content" data-lang="en">Years as General Manager</span>
-                  <span class="lang-content" data-lang="fr">Ans de direction générale</span>
-                  <span class="lang-content" data-lang="tr">Yıl Genel Müdürlük</span>
+                  <span class="lang-content active" data-lang="de">Jahre Verantwortlicher Manager</span>
+                  <span class="lang-content" data-lang="en">Years as Responsible Manager</span>
+                  <span class="lang-content" data-lang="fr">Ans comme directeur responsable</span>
+                  <span class="lang-content" data-lang="tr">Yıl Sorumlu Müdür</span>
                 </p>
               </div>
             </div>
@@ -309,7 +296,7 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (no background image) -->
     <section id="contact" class="py-20 contact-bg">
       <div class="max-w-3xl mx-auto px-6">
         <div class="contact-card text-white rounded-3xl shadow-2xl p-10 sm:p-14 text-center">
@@ -364,7 +351,7 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (no background image) -->
   <footer class="footer-bg text-slate-300 py-8">
     <div class="max-w-6xl mx-auto px-6 text-center text-sm">
       <p>
