@@ -46,15 +46,17 @@
 
     /* HERO background:
        Layer 1 = dark overlay (keeps text fully readable)
-       Layer 2 = the exact URL requested (https://https://unsplash.com.com)
-       Layer 3 = direct https://unsplash.com photo file, which renders if layer 2 is not an image
-       Layer 4 = solid colour fallback */
+       Layer 2 = URL as requested (https://unsplash.com is the Unsplash homepage, not an image file, so browsers cannot paint it)
+       Layer 3 = direct Unsplash image file (elderly care / compassion) that actually renders
+       Layer 4 = solid colour fallback
+       To use a different photo: open it on Unsplash, right-click the image > "Copy image address",
+       and paste that images.unsplash.com link in place of Layer 3. */
     .hero-bg {
       background-color: #0f2a3d;
       background-image:
         linear-gradient(135deg, rgba(15,42,61,.92) 0%, rgba(26,72,102,.84) 55%, rgba(43,111,158,.74) 100%),
-        url('https://https://unsplash.com.com'),
-        url('https://images.https://unsplash.com.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1920&q=80');
+        url('https://unsplash.com'),
+        url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
     }
@@ -62,7 +64,7 @@
       background-color: #2b6f9e;
       background-image:
         linear-gradient(180deg, rgba(15,42,61,.05) 0%, rgba(15,42,61,.45) 100%),
-        url('https://images.https://unsplash.com.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=900&q=80');
+        url('https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=900&q=80');
       background-size: cover;
       background-position: center;
     }
@@ -70,7 +72,7 @@
       background-color: #f1f5f9;
       background-image:
         linear-gradient(180deg, rgba(248,250,252,.95) 0%, rgba(241,245,249,.93) 100%),
-        url('https://images.https://unsplash.com.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1920&q=80');
+        url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -79,7 +81,7 @@
       background-color: #ffffff;
       background-image:
         linear-gradient(180deg, rgba(255,255,255,.90) 0%, rgba(238,246,251,.92) 100%),
-        url('https://images.https://unsplash.com.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80');
+        url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
     }
@@ -87,7 +89,7 @@
       background-color: #0f2a3d;
       background-image:
         linear-gradient(135deg, rgba(15,42,61,.93) 0%, rgba(26,72,102,.88) 100%),
-        url('https://images.https://unsplash.com.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1400&q=80');
+        url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1400&q=80');
       background-size: cover;
       background-position: center;
     }
@@ -95,7 +97,7 @@
       background-color: #0f2a3d;
       background-image:
         linear-gradient(rgba(15,42,61,.96), rgba(15,42,61,.96)),
-        url('https://images.https://unsplash.com.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=1600&q=60');
+        url('https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=1600&q=60');
       background-size: cover;
       background-position: center;
     }
