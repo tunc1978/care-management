@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tuncay ERGİN – Senioren- und Behindertenbetreuung & Vormundschaftsmanagement in der Türkei</title>
-  <meta id="meta-desc" name="description" content="Senioren- und Behindertenbetreuung (Yaşlı ve Engelli Bakımı) sowie Vormundschaftsmanagement in der Türkei für Expats im Ausland und lokale Anwälte. 20 Jahre Erfahrung.">
+  <meta id="meta-desc" name="description" content="Senioren- und Behindertenbetreuung (Yaşlı ve Engelli Bakımı), Vormundschaftsmanagement sowie Unternehmensberatung für Investoren privater Pflegezentren in der Türkei. 20 Jahre Erfahrung.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -71,32 +71,36 @@
     </div>
   </div>
 
-  <!-- HERO: Unsplash photo "Nurse smiling with elderly patient in room" (Age Cymru) + dark tint overlay -->
+  <!-- HERO
+       Background layers (first working layer wins):
+       1) https://unsplash.com  (exact URL requested earlier; it is the Unsplash homepage, not an image file, so browsers skip it)
+       2) Unsplash photo "A smiling woman in green scrubs leaning toward an elderly person in a chair" (Age Cymru)
+       3) solid colour fallback
+       A semi-transparent dark tint (bg-black/60) sits on top so the white text stays sharp. -->
   <header class="relative text-white overflow-hidden"
-          style="background-color:#0f172a; background-image:url('https://images.unsplash.com/photo-1765896387387-0538bc9f997e?auto=format&fit=crop&w=1920&q=80'); background-size:cover; background-position:center;">
-    <!-- Semi-transparent dark tint so all white text stays sharp -->
+          style="background-color:#0f172a; background-image:url('https://unsplash.com'), url('https://images.unsplash.com/photo-1765896387398-1e1ae8d2eb85?auto=format&fit=crop&w=1920&q=80'); background-size:cover; background-position:center;">
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative max-w-4xl mx-auto px-6 py-28 sm:py-40 text-center">
       <div class="lang-content active" data-lang="de">
-        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/30 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Türkei · Für Expats im Ausland &amp; lokale Anwälte</p>
+        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/30 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Türkei · Für Expats, Investoren &amp; lokale Anwälte</p>
         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">Senioren- und Behindertenbetreuung &amp; Vormundschaftsmanagement in der Türkei</h1>
         <p class="mt-6 text-lg sm:text-xl text-slate-100 max-w-2xl mx-auto drop-shadow">Mehr als 20 Jahre Erfahrung im Sozialwesen – damit Ihre älteren oder behinderten Angehörigen und Mandanten in der Türkei zuverlässig versorgt und rechtlich gut vertreten sind.</p>
         <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-slate-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-slate-200 transition">Jetzt Kontakt aufnehmen <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="lang-content" data-lang="en">
-        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/30 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Turkey · For Expats Abroad &amp; Local Lawyers</p>
+        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/30 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Turkey · For Expats, Investors &amp; Local Lawyers</p>
         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">Elderly and Disabled Care &amp; Legal Guardianship Management</h1>
         <p class="mt-6 text-lg sm:text-xl text-slate-100 max-w-2xl mx-auto drop-shadow">Over 20 years of experience in social work – ensuring your elderly or disabled loved ones and clients in Turkey are reliably cared for and legally well represented.</p>
         <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-slate-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-slate-200 transition">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="lang-content" data-lang="fr">
-        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/30 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Turquie · Pour les expatriés &amp; avocats locaux</p>
+        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/30 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Turquie · Pour les expatriés, investisseurs &amp; avocats locaux</p>
         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">Accompagnement des Aînés et des Personnes Handicapées &amp; Gestion de la Tutelle en Turquie</h1>
         <p class="mt-6 text-lg sm:text-xl text-slate-100 max-w-2xl mx-auto drop-shadow">Plus de 20 ans d'expérience dans le travail social – pour que vos proches âgés ou handicapés, ainsi que vos clients en Turquie, soient bien pris en charge et juridiquement bien représentés.</p>
         <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-slate-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-slate-200 transition">Nous contacter <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="lang-content" data-lang="tr">
-        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/30 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Türkiye · Yurt Dışındaki Gurbetçiler &amp; Yerel Avukatlar İçin</p>
+        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/30 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Türkiye · Gurbetçiler, Yatırımcılar &amp; Yerel Avukatlar İçin</p>
         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">Yaşlı ve Engelli Bakımı &amp; Vasilik Yönetimi</h1>
         <p class="mt-6 text-lg sm:text-xl text-slate-100 max-w-2xl mx-auto drop-shadow">Sosyal hizmet alanında 20 yılı aşkın deneyim – Türkiye'deki yaşlı veya engelli yakınlarınızın ve müvekkillerinizin güvenilir biçimde bakım görmesi ve hukuken doğru temsil edilmesi için.</p>
         <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-slate-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-slate-200 transition">İletişime Geçin <i class="fa-solid fa-arrow-right"></i></a>
@@ -120,28 +124,28 @@
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">Mein Name ist Tuncay ERGİN. Ich bin seit 20 Jahren als Sozialarbeits-Spezialist tätig und habe in dieser Zeit hunderte Familien mit älteren und behinderten Angehörigen in schwierigen Lebenssituationen begleitet.</p>
               <p class="text-slate-600 leading-relaxed mb-4">15 Jahre lang war ich als Verantwortlicher Manager eines privaten Pflegezentrums für Menschen mit Behinderungen in der Türkei tätig. Diese Erfahrung hat mir ein tiefes Verständnis für pflegerische, rechtliche und menschliche Bedürfnisse vermittelt.</p>
-              <p class="text-slate-600 leading-relaxed">Heute unterstütze ich Expats und lokale Anwälte dabei, sicherzustellen, dass ältere und behinderte Angehörige sowie Mandanten in der Türkei würdevoll, sicher und rechtlich korrekt betreut werden.</p>
+              <p class="text-slate-600 leading-relaxed">Heute unterstütze ich Expats und lokale Anwälte dabei, sicherzustellen, dass ältere und behinderte Angehörige sowie Mandanten in der Türkei würdevoll, sicher und rechtlich korrekt betreut werden – und berate Investoren beim Aufbau und Betrieb privater Pflegezentren.</p>
             </div>
             <div class="lang-content" data-lang="en">
               <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">About Me</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">My name is Tuncay ERGİN. I have worked as a Social Work Specialist for 20 years, guiding hundreds of families with elderly and disabled relatives through challenging life situations.</p>
               <p class="text-slate-600 leading-relaxed mb-4">For 15 years, I served as Responsible Manager of a private care center for people with disabilities in Turkey. This experience gave me a deep understanding of care, legal, and human needs.</p>
-              <p class="text-slate-600 leading-relaxed">Today I support expats and local lawyers in ensuring that elderly and disabled relatives and clients in Turkey receive dignified, safe, and legally correct care.</p>
+              <p class="text-slate-600 leading-relaxed">Today I support expats and local lawyers in ensuring that elderly and disabled relatives and clients in Turkey receive dignified, safe, and legally correct care – and I advise investors on establishing and operating private care centers.</p>
             </div>
             <div class="lang-content" data-lang="fr">
               <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">À propos de moi</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">Je m'appelle Tuncay ERGİN. Je travaille depuis 20 ans en tant que spécialiste du travail social et j'ai accompagné des centaines de familles ayant des proches âgés ou handicapés dans des situations de vie difficiles.</p>
               <p class="text-slate-600 leading-relaxed mb-4">Pendant 15 ans, j'ai été directeur responsable d'un centre de soins privé pour personnes en situation de handicap en Turquie. Cette expérience m'a apporté une compréhension approfondie des besoins en matière de soins, de droit et d'humanité.</p>
-              <p class="text-slate-600 leading-relaxed">Aujourd'hui, j'aide les expatriés et les avocats locaux à garantir que leurs proches âgés ou handicapés, ainsi que leurs clients en Turquie, bénéficient d'une prise en charge digne, sûre et juridiquement conforme.</p>
+              <p class="text-slate-600 leading-relaxed">Aujourd'hui, j'aide les expatriés et les avocats locaux à garantir que leurs proches âgés ou handicapés, ainsi que leurs clients en Turquie, bénéficient d'une prise en charge digne, sûre et juridiquement conforme – et je conseille les investisseurs dans la création et l'exploitation de centres de soins privés.</p>
             </div>
             <div class="lang-content" data-lang="tr">
               <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Hakkımda</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">Adım Tuncay ERGİN. 20 yıldır Sosyal Hizmet Uzmanı olarak görev yapıyorum ve bu süre boyunca zor yaşam koşullarındaki, yaşlı ve engelli yakınları olan yüzlerce aileye rehberlik ettim.</p>
               <p class="text-slate-600 leading-relaxed mb-4">15 yıl boyunca Türkiye'de engelli bireylere hizmet veren özel bir bakım merkezinde Sorumlu Müdür olarak görev yaptım. Bu deneyim bana bakım, hukuk ve insani ihtiyaçlar konusunda derin bir anlayış kazandırdı.</p>
-              <p class="text-slate-600 leading-relaxed">Bugün, yurt dışında yaşayan gurbetçilere ve yerel avukatlara, Türkiye'deki yaşlı ve engelli yakınlarının ve müvekkillerinin onurlu, güvenli ve hukuka uygun biçimde bakım görmesini sağlamalarında destek oluyorum.</p>
+              <p class="text-slate-600 leading-relaxed">Bugün, yurt dışında yaşayan gurbetçilere ve yerel avukatlara, Türkiye'deki yaşlı ve engelli yakınlarının ve müvekkillerinin onurlu, güvenli ve hukuka uygun biçimde bakım görmesini sağlamalarında destek oluyorum; ayrıca özel bakım merkezi kurmak ve işletmek isteyen yatırımcılara danışmanlık veriyorum.</p>
             </div>
             <div class="mt-8 grid grid-cols-2 gap-4">
               <div class="bg-slate-100 rounded-xl p-4 text-center">
@@ -168,116 +172,178 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- SERVICES (5 cards) -->
     <section id="services" class="py-20 bg-slate-50">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
           <div class="lang-content active" data-lang="de">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Meine Leistungen</h2>
-            <p class="mt-3 text-slate-600">Umfassende Unterstützung in der Alten- und Behindertenbetreuung – zuverlässig vor Ort, transparent für Sie.</p>
+            <p class="mt-3 text-slate-600 max-w-2xl mx-auto">Umfassende Unterstützung in der Alten- und Behindertenbetreuung sowie Unternehmensberatung für Investoren privater Pflegezentren – zuverlässig vor Ort, transparent für Sie. Alle Leistungen werden projektbasiert und nach individueller Beratung bepreist.</p>
           </div>
           <div class="lang-content" data-lang="en">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">My Services</h2>
-            <p class="mt-3 text-slate-600">Comprehensive Elderly and Disabled Care support – reliable on the ground, transparent for you.</p>
+            <p class="mt-3 text-slate-600 max-w-2xl mx-auto">Comprehensive Elderly and Disabled Care support plus corporate consultancy for investors in private care centers – reliable on the ground, transparent for you. All services are priced on a project basis and upon individual consultation.</p>
           </div>
           <div class="lang-content" data-lang="fr">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Mes services</h2>
-            <p class="mt-3 text-slate-600">Un accompagnement complet pour les aînés et les personnes handicapées – fiable sur place, transparent pour vous.</p>
+            <p class="mt-3 text-slate-600 max-w-2xl mx-auto">Un accompagnement complet pour les aînés et les personnes handicapées, ainsi qu'un conseil aux entreprises pour les investisseurs de centres de soins privés – fiable sur place, transparent pour vous. Tous les services sont tarifés par projet et après consultation individuelle.</p>
           </div>
           <div class="lang-content" data-lang="tr">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Hizmetlerim</h2>
-            <p class="mt-3 text-slate-600">Yaşlı ve Engelli Bakımı için kapsamlı destek – sahada güvenilir, sizin için şeffaf.</p>
+            <p class="mt-3 text-slate-600 max-w-2xl mx-auto">Yaşlı ve Engelli Bakımı için kapsamlı destek ile özel bakım merkezi yatırımcıları için kurumsal danışmanlık – sahada güvenilir, sizin için şeffaf. Tüm hizmetler proje bazlı olarak ve birebir görüşme sonrasında fiyatlandırılır.</p>
           </div>
           <div class="w-16 h-1 bg-brand-500 rounded mt-4 mx-auto"></div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
           <!-- Card 1 -->
-          <article class="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-slate-800">
+          <article class="lg:col-span-2 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-slate-800">
             <div class="w-14 h-14 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-scale-balanced"></i></div>
             <div class="lang-content active" data-lang="de">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Vormundschaft &amp; Gerichtsmanagement (Alten- und Behindertenfürsorge)</h3>
               <p class="text-slate-600 leading-relaxed">Professionelle Vorbereitung der obligatorischen jährlichen Vormundschaftskontobücher und Vermögensberichte für türkische Zivilgerichte (Sulh Hukuk Mahkemeleri). Volle Koordination mit Familienanwälten.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Preisgestaltung: Projektbasiert &amp; nach Beratung</p>
             </div>
             <div class="lang-content" data-lang="en">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Legal Guardianship &amp; Court Reporting (Elderly &amp; Disabled)</h3>
               <p class="text-slate-600 leading-relaxed">Expert preparation of mandatory annual guardianship account books and asset reports required by Turkish Civil Courts (Sulh Hukuk Mahkemeleri). Full coordination with family lawyers.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Pricing: Project-Based &amp; Upon Consultation</p>
             </div>
             <div class="lang-content" data-lang="fr">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Gestion de la Tutelle &amp; Rapports Juridiques (Aînés et Handicapés)</h3>
               <p class="text-slate-600 leading-relaxed">Préparation experte des rapports annuels de tutelle et des états du patrimoine exigés par les tribunaux civils turcs (Sulh Hukuk Mahkemeleri). Coordination complète avec les avocats.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Tarification : par projet &amp; sur consultation</p>
             </div>
             <div class="lang-content" data-lang="tr">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Vasilik ve Mahkeme Süreçleri Yönetimi (Yaşlı &amp; Engelli)</h3>
               <p class="text-slate-600 leading-relaxed">Türk Sulh Hukuk Mahkemeleri tarafından talep edilen zorunlu yıllık vasi defterlerinin ve mal varlığı raporlarının uzmanlıkla hazırlanması. Aile avukatlarıyla tam koordinasyon.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Fiyatlandırma: Proje Bazlı / Görüşmeye Dayalı</p>
             </div>
           </article>
 
           <!-- Card 2 -->
-          <article class="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-slate-800">
+          <article class="lg:col-span-2 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-slate-800">
             <div class="w-14 h-14 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-truck-medical"></i></div>
             <div class="lang-content active" data-lang="de">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Medizinische Logistik &amp; Medikamentenverfolgung</h3>
               <p class="text-slate-600 leading-relaxed">Strikte Nachverfolgung von Arztterminen, Verwaltung der Krankenhauslogistik, Beschaffung von verschreibungspflichtigen Medikamenten und speziellen medizinischen Geräten.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Preisgestaltung: Projektbasiert &amp; nach Beratung</p>
             </div>
             <div class="lang-content" data-lang="en">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Healthcare Logistics &amp; Medical Tracking</h3>
               <p class="text-slate-600 leading-relaxed">Strict tracking of medical appointments, managing hospital logistics, sourcing prescription medications, and specialized medical devices (wheelchairs, oxygen concentrators, etc.).</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Pricing: Project-Based &amp; Upon Consultation</p>
             </div>
             <div class="lang-content" data-lang="fr">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Logistique de Santé &amp; Suivi Médical</h3>
               <p class="text-slate-600 leading-relaxed">Suivi rigoureux des rendez-vous médicaux, gestion de la logistique hospitalière, approvisionnement en médicaments sur ordonnance et dispositifs médicaux spécialisés.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Tarification : par projet &amp; sur consultation</p>
             </div>
             <div class="lang-content" data-lang="tr">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Sağlık Lojistiği ve Tıbbi Bakım Takibi</h3>
               <p class="text-slate-600 leading-relaxed">Tıbbi randevuların sıkı takibi, hastane lojistiğinin yönetilmesi, reçeteli ilaçların ve özel tıbbi cihazların (tekerlekli sandalye, oksijen konsantratörü vb.) temini.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Fiyatlandırma: Proje Bazlı / Görüşmeye Dayalı</p>
             </div>
           </article>
 
           <!-- Card 3 -->
-          <article class="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-slate-800">
+          <article class="md:col-span-2 lg:col-span-2 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-slate-800">
             <div class="w-14 h-14 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-house-chimney-user"></i></div>
             <div class="lang-content active" data-lang="de">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Haushaltsmanagement &amp; Offizielle Transaktionen</h3>
               <p class="text-slate-600 leading-relaxed">Komplette Koordination der professionellen Hausreinigung, Instandhaltung, Zahlung von Strom-, Wasser-, Gas- und Internetrechnungen sowie Abwicklung aller offiziellen bürokratischen Behördengänge in der Türkei.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Preisgestaltung: Projektbasiert &amp; nach Beratung</p>
             </div>
             <div class="lang-content" data-lang="en">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Household Management &amp; Official Transactions</h3>
               <p class="text-slate-600 leading-relaxed">Complete coordination of professional home cleaning, maintenance, utility bill payments (electricity, water, gas, internet), and execution of all official bureaucratic transactions in Turkey.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Pricing: Project-Based &amp; Upon Consultation</p>
             </div>
             <div class="lang-content" data-lang="fr">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Gestion Domestique &amp; Transactions Officielles</h3>
               <p class="text-slate-600 leading-relaxed">Coordination complète du nettoyage professionnel de la maison, de l'entretien, du paiement des factures (électricité, eau, gaz, internet) et gestion de toutes les transactions administratives officielles en Turquie.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Tarification : par projet &amp; sur consultation</p>
             </div>
             <div class="lang-content" data-lang="tr">
               <h3 class="text-xl font-bold text-slate-900 mb-3">Ev Yönetimi ve Resmi İşlem Takibi</h3>
               <p class="text-slate-600 leading-relaxed">Profesyonel ev temizliği, bakım-onarım işleri, fatura ödemelerinin (elektrik, su, doğalgaz, internet) eksiksiz koordinasyonu ve Türkiye'deki tüm resmi bürokratik işlemlerin yapılması.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 bg-slate-100 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Fiyatlandırma: Proje Bazlı / Görüşmeye Dayalı</p>
+            </div>
+          </article>
+
+          <!-- Card 4 (NEW): Care Center Establishment & Licensing Consultancy -->
+          <article class="md:col-span-1 lg:col-span-3 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-brand-600">
+            <div class="w-14 h-14 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-building-circle-check"></i></div>
+            <div class="lang-content active" data-lang="de">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Beratung zur Gründung &amp; Lizenzierung von Pflegezentren</h3>
+              <p class="text-slate-600 leading-relaxed">Umfassende institutionelle Begleitung für lokale und internationale Investoren. Auswahl von Grundstück und Gebäude gemäß den Vorschriften des Ministeriums, Optimierung des Architekturprojekts, Zusammenstellung der Lizenzunterlagen und durchgängige Steuerung der offiziellen Eröffnungsgenehmigungen.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Preisgestaltung: Projektbasiert &amp; nach Beratung</p>
+            </div>
+            <div class="lang-content" data-lang="en">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Care Center Establishment &amp; Licensing Consultancy</h3>
+              <p class="text-slate-600 leading-relaxed">Full institutional guidance for local and international investors. Land and building selection according to Ministry regulations, architectural project optimization, compilation of the licensing portfolio, and end-to-end management of official opening approvals.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Pricing: Project-Based &amp; Upon Consultation</p>
+            </div>
+            <div class="lang-content" data-lang="fr">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Conseil en Création &amp; Autorisation de Centres de Soins</h3>
+              <p class="text-slate-600 leading-relaxed">Accompagnement institutionnel complet pour les investisseurs locaux et internationaux. Sélection du terrain et du bâtiment selon la réglementation du Ministère, optimisation du projet architectural, constitution du dossier d'autorisation et gestion de bout en bout des approbations officielles d'ouverture.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Tarification : par projet &amp; sur consultation</p>
+            </div>
+            <div class="lang-content" data-lang="tr">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Bakım Merkezi Kuruluş ve Ruhsatlandırma Danışmanlığı</h3>
+              <p class="text-slate-600 leading-relaxed">Yerli ve yabancı yatırımcılar için kapsamlı kurumsal rehberlik. Bakanlık mevzuatına uygun arsa ve bina seçimi, mimari proje optimizasyonu, ruhsatlandırma dosyasının hazırlanması ve resmi açılış onaylarının uçtan uca yönetimi.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Fiyatlandırma: Proje Bazlı / Görüşmeye Dayalı</p>
+            </div>
+          </article>
+
+          <!-- Card 5 (NEW): Operational Audit & Pre-Inspection "Check-Up" -->
+          <article class="md:col-span-1 lg:col-span-3 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-brand-600">
+            <div class="w-14 h-14 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-clipboard-check"></i></div>
+            <div class="lang-content active" data-lang="de">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Betriebsprüfung &amp; Vorab-Inspektion „Check-Up"</h3>
+              <p class="text-slate-600 leading-relaxed">Spezialisierte rechtliche Prüfdienstleistungen für aktive private Pflegeeinrichtungen vor den offiziellen Inspektionen des Ministeriums. Umfassende rechtliche Überprüfung von Patientenakten, Dienstplänen des Personals, Sozialdiensten und Unterlagen der Gesundheitseinheit, um 100 % Regelkonformität sicherzustellen.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Preisgestaltung: Projektbasiert &amp; nach Beratung</p>
+            </div>
+            <div class="lang-content" data-lang="en">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Operational Audit &amp; Pre-Inspection "Check-Up"</h3>
+              <p class="text-slate-600 leading-relaxed">Dedicated legal audit services for active private care facilities prior to official Ministry inspections. Comprehensive legal review of patient portfolios, staff shifts, social services, and health unit records to ensure 100% regulatory compliance.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Pricing: Project-Based &amp; Upon Consultation</p>
+            </div>
+            <div class="lang-content" data-lang="fr">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Audit Opérationnel &amp; « Check-Up » de Pré-Inspection</h3>
+              <p class="text-slate-600 leading-relaxed">Services d'audit juridique dédiés aux établissements de soins privés en activité, avant les inspections officielles du Ministère. Examen juridique complet des dossiers des patients, des plannings du personnel, des services sociaux et des registres de l'unité de santé afin de garantir une conformité réglementaire à 100 %.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Tarification : par projet &amp; sur consultation</p>
+            </div>
+            <div class="lang-content" data-lang="tr">
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Kurumsal İşleyiş ve Ön Denetim Danışmanlığı (“Check-Up”)</h3>
+              <p class="text-slate-600 leading-relaxed">Faal özel bakım kuruluşları için, Bakanlığın resmi denetimlerinden önce yürütülen yasal denetim hizmetleri. Hasta dosyalarının, personel vardiyalarının, sosyal hizmet ve sağlık birimi kayıtlarının kapsamlı yasal incelemesi ile %100 mevzuat uyumunun sağlanması.</p>
+              <p class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 rounded-full px-4 py-2"><i class="fa-solid fa-handshake"></i>Fiyatlandırma: Proje Bazlı / Görüşmeye Dayalı</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (colours only, no image) -->
     <section id="contact" class="py-20 bg-white">
       <div class="max-w-3xl mx-auto px-6">
         <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl shadow-2xl p-10 sm:p-14 text-center">
           <div class="w-20 h-20 mx-auto rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-3xl mb-6"><i class="fa-solid fa-handshake-angle"></i></div>
           <div class="lang-content active" data-lang="de">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold">Kontakt</h2>
-            <p class="mt-4 text-slate-300">Sprechen wir über die Situation Ihrer älteren oder behinderten Angehörigen oder Mandanten. Schreiben Sie mir – ich antworte persönlich.</p>
+            <p class="mt-4 text-slate-300">Sprechen wir über die Situation Ihrer älteren oder behinderten Angehörigen oder Mandanten – oder über Ihr Investitionsprojekt für ein privates Pflegezentrum. Schreiben Sie mir – ich antworte persönlich.</p>
           </div>
           <div class="lang-content" data-lang="en">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold">Contact</h2>
-            <p class="mt-4 text-slate-300">Let's talk about the situation of your elderly or disabled loved ones or clients. Write to me – I will reply personally.</p>
+            <p class="mt-4 text-slate-300">Let's talk about the situation of your elderly or disabled loved ones or clients – or about your investment project for a private care center. Write to me – I will reply personally.</p>
           </div>
           <div class="lang-content" data-lang="fr">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold">Contact</h2>
-            <p class="mt-4 text-slate-300">Parlons de la situation de vos proches âgés ou handicapés, ou de vos clients. Écrivez-moi – je vous répondrai personnellement.</p>
+            <p class="mt-4 text-slate-300">Parlons de la situation de vos proches âgés ou handicapés, ou de vos clients – ou de votre projet d'investissement dans un centre de soins privé. Écrivez-moi – je vous répondrai personnellement.</p>
           </div>
           <div class="lang-content" data-lang="tr">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold">İletişim</h2>
-            <p class="mt-4 text-slate-300">Yaşlı veya engelli yakınlarınızın ya da müvekkillerinizin durumunu konuşalım. Bana yazın – size bizzat yanıt vereceğim.</p>
+            <p class="mt-4 text-slate-300">Yaşlı veya engelli yakınlarınızın ya da müvekkillerinizin durumunu – veya özel bakım merkezi yatırım projenizi – konuşalım. Bana yazın – size bizzat yanıt vereceğim.</p>
           </div>
 
           <p class="mt-8 text-2xl font-semibold tracking-wide">Tuncay ERGİN</p>
@@ -313,7 +379,7 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (colours only, no image) -->
   <footer class="bg-slate-900 text-slate-300 py-8">
     <div class="max-w-6xl mx-auto px-6 text-center text-sm">
       <p>
@@ -344,10 +410,10 @@
         tr: 'Tuncay ERGİN – Yaşlı ve Engelli Bakımı & Vasilik Yönetimi'
       };
       var DESCRIPTIONS = {
-        de: 'Senioren- und Behindertenbetreuung (Yaşlı ve Engelli Bakımı) sowie Vormundschaftsmanagement in der Türkei für Expats im Ausland und lokale Anwälte. 20 Jahre Erfahrung.',
-        en: 'Elderly and Disabled Care (Yaşlı ve Engelli Bakımı) and Legal Guardianship Management in Turkey for expats abroad and local lawyers. 20 years of experience.',
-        fr: 'Accompagnement des Aînés et des Personnes Handicapées (Yaşlı ve Engelli Bakımı) et gestion de la tutelle en Turquie pour les expatriés et les avocats locaux. 20 ans d\'expérience.',
-        tr: 'Türkiye\'de Yaşlı ve Engelli Bakımı ve Vasilik Yönetimi – yurt dışındaki gurbetçiler ve yerel avukatlar için. 20 yıllık deneyim.'
+        de: 'Senioren- und Behindertenbetreuung (Yaşlı ve Engelli Bakımı), Vormundschaftsmanagement sowie Unternehmensberatung für Investoren privater Pflegezentren in der Türkei. 20 Jahre Erfahrung.',
+        en: 'Elderly and Disabled Care (Yaşlı ve Engelli Bakımı), Legal Guardianship Management and corporate consultancy for investors in private care centers in Turkey. 20 years of experience.',
+        fr: 'Accompagnement des Aînés et des Personnes Handicapées (Yaşlı ve Engelli Bakımı), gestion de la tutelle et conseil aux investisseurs de centres de soins privés en Turquie. 20 ans d\'expérience.',
+        tr: 'Türkiye\'de Yaşlı ve Engelli Bakımı, Vasilik Yönetimi ve özel bakım merkezi yatırımcıları için kurumsal danışmanlık. 20 yıllık deneyim.'
       };
 
       function switchLanguage(lang) {
