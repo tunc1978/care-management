@@ -41,7 +41,7 @@
     div.lang-content.active, header .lang-content.active { display: block; animation: fadeIn .35s ease; }
     span.lang-content.active { display: inline; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-    .lang-btn.active { background-color: #ffffff; color: #0f2a3d; border-color: #ffffff; }
+    .lang-btn.active { background-color: #ffffff; color: #0f172a; border-color: #ffffff; }
     section[id] { scroll-margin-top: 4rem; }
 
     /* Large colorful flag emojis in the language bar */
@@ -52,89 +52,51 @@
       margin-right: .25rem;
       font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
     }
-
-    .about-photo {
-      background-color: #2b6f9e;
-      background-image:
-        linear-gradient(180deg, rgba(15,42,61,.05) 0%, rgba(15,42,61,.45) 100%),
-        url('https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=900&q=80');
-      background-size: cover;
-      background-position: center;
-    }
-    .services-bg {
-      background-color: #f1f5f9;
-      background-image:
-        linear-gradient(180deg, rgba(248,250,252,.95) 0%, rgba(241,245,249,.93) 100%),
-        url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1920&q=80');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-
-    /* Contact + footer: background images fully removed, clean colour gradients only */
-    .contact-bg {
-      background-color: #eef6fb;
-      background-image: linear-gradient(180deg, #ffffff 0%, #eef6fb 100%);
-    }
-    .contact-card {
-      background-color: #0f2a3d;
-      background-image: linear-gradient(135deg, #0f2a3d 0%, #1a4866 100%);
-    }
-    .footer-bg {
-      background-color: #0f2a3d;
-    }
-    @media (max-width: 768px) { .services-bg { background-attachment: scroll; } }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
   <!-- Sticky Language Bar -->
-  <div class="sticky top-0 z-50 bg-brand-900 shadow-md">
+  <div class="sticky top-0 z-50 bg-slate-950 shadow-md">
     <div class="max-w-6xl mx-auto px-3 sm:px-4 py-2 flex items-center justify-between">
       <span class="hidden md:flex items-center text-slate-300 text-sm">
         <i class="fa-solid fa-globe mr-2"></i> Tuncay ERGİN
       </span>
       <div class="flex flex-wrap gap-2 mx-auto md:mx-0 justify-center" role="group" aria-label="Language selector">
-        <button type="button" data-lang="de" class="lang-btn active px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition"><span class="flag">🇩🇪</span> Deutsch</button>
-        <button type="button" data-lang="en" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition"><span class="flag">🇬🇧</span> English</button>
-        <button type="button" data-lang="fr" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition"><span class="flag">🇫🇷</span> Français</button>
-        <button type="button" data-lang="tr" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-brand-900 transition"><span class="flag">🇹🇷</span> Türkçe</button>
+        <button type="button" data-lang="de" class="lang-btn active px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-slate-900 transition"><span class="flag">🇩🇪</span> Deutsch</button>
+        <button type="button" data-lang="en" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-slate-900 transition"><span class="flag">🇬🇧</span> English</button>
+        <button type="button" data-lang="fr" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-slate-900 transition"><span class="flag">🇫🇷</span> Français</button>
+        <button type="button" data-lang="tr" class="lang-btn px-3 sm:px-4 py-1.5 rounded-full text-sm font-semibold text-slate-200 border border-slate-500 hover:bg-white hover:text-slate-900 transition"><span class="flag">🇹🇷</span> Türkçe</button>
       </div>
     </div>
   </div>
 
-  <!-- HERO
-       NOTE: https://unsplash.com is the Unsplash homepage, not an image file, so browsers cannot paint it as a background.
-       The dark overlay + solid colour keep all white text 100% readable either way.
-       To show a real photo: open a photo on Unsplash, right-click it > "Copy image address",
-       and paste that images.unsplash.com link in place of the url('...') below. -->
-  <header class="relative text-white overflow-hidden"
-          style="background-color:#0f2a3d; background-image: linear-gradient(135deg, rgba(15,42,61,.92) 0%, rgba(26,72,102,.84) 55%, rgba(43,111,158,.74) 100%), url('https://unsplash.com'); background-size: cover; background-position: center;">
-    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 20%, #fff 1px, transparent 1px); background-size: 28px 28px;"></div>
+  <!-- HERO -->
+  <header class="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
     <div class="relative max-w-4xl mx-auto px-6 py-28 sm:py-40 text-center">
       <div class="lang-content active" data-lang="de">
-        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/15 backdrop-blur text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Türkei · Für Expats im Ausland &amp; lokale Anwälte</p>
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">Senioren- und Behindertenbetreuung &amp; Vormundschaftsmanagement in der Türkei</h1>
-        <p class="mt-6 text-lg sm:text-xl text-slate-100 max-w-2xl mx-auto">Mehr als 20 Jahre Erfahrung im Sozialwesen – damit Ihre älteren oder behinderten Angehörigen und Mandanten in der Türkei zuverlässig versorgt und rechtlich gut vertreten sind.</p>
-        <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-brand-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-brand-100 transition">Jetzt Kontakt aufnehmen <i class="fa-solid fa-arrow-right"></i></a>
+        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/20 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Türkei · Für Expats im Ausland &amp; lokale Anwälte</p>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">Senioren- und Behindertenbetreuung &amp; Vormundschaftsmanagement in der Türkei</h1>
+        <p class="mt-6 text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto">Mehr als 20 Jahre Erfahrung im Sozialwesen – damit Ihre älteren oder behinderten Angehörigen und Mandanten in der Türkei zuverlässig versorgt und rechtlich gut vertreten sind.</p>
+        <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-slate-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-slate-200 transition">Jetzt Kontakt aufnehmen <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="lang-content" data-lang="en">
-        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/15 backdrop-blur text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Turkey · For Expats Abroad &amp; Local Lawyers</p>
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">Elderly and Disabled Care &amp; Legal Guardianship Management in Turkey</h1>
-        <p class="mt-6 text-lg sm:text-xl text-slate-100 max-w-2xl mx-auto">Over 20 years of experience in social work – ensuring your elderly or disabled loved ones and clients in Turkey are reliably cared for and legally well represented.</p>
-        <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-brand-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-brand-100 transition">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
+        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/20 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Turkey · For Expats Abroad &amp; Local Lawyers</p>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">Elderly and Disabled Care &amp; Legal Guardianship Management in Turkey</h1>
+        <p class="mt-6 text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto">Over 20 years of experience in social work – ensuring your elderly or disabled loved ones and clients in Turkey are reliably cared for and legally well represented.</p>
+        <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-slate-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-slate-200 transition">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="lang-content" data-lang="fr">
-        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/15 backdrop-blur text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Turquie · Pour les expatriés &amp; avocats locaux</p>
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">Accompagnement des Aînés et des Personnes Handicapées &amp; Gestion de la Tutelle en Turquie</h1>
-        <p class="mt-6 text-lg sm:text-xl text-slate-100 max-w-2xl mx-auto">Plus de 20 ans d'expérience dans le travail social – pour que vos proches âgés ou handicapés, ainsi que vos clients en Turquie, soient bien pris en charge et juridiquement bien représentés.</p>
-        <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-brand-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-brand-100 transition">Nous contacter <i class="fa-solid fa-arrow-right"></i></a>
+        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/20 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Turquie · Pour les expatriés &amp; avocats locaux</p>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">Accompagnement des Aînés et des Personnes Handicapées &amp; Gestion de la Tutelle en Turquie</h1>
+        <p class="mt-6 text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto">Plus de 20 ans d'expérience dans le travail social – pour que vos proches âgés ou handicapés, ainsi que vos clients en Turquie, soient bien pris en charge et juridiquement bien représentés.</p>
+        <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-slate-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-slate-200 transition">Nous contacter <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="lang-content" data-lang="tr">
-        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/15 backdrop-blur text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Türkiye · Yurt Dışındaki Gurbetçiler &amp; Yerel Avukatlar İçin</p>
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">Türkiye'de Yaşlı ve Engelli Bakımı &amp; Vasilik Yönetimi</h1>
-        <p class="mt-6 text-lg sm:text-xl text-slate-100 max-w-2xl mx-auto">Sosyal hizmet alanında 20 yılı aşkın deneyim – Türkiye'deki yaşlı veya engelli yakınlarınızın ve müvekkillerinizin güvenilir biçimde bakım görmesi ve hukuken doğru temsil edilmesi için.</p>
-        <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-brand-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-brand-100 transition">İletişime Geçin <i class="fa-solid fa-arrow-right"></i></a>
+        <p class="inline-block mb-5 px-4 py-1 rounded-full bg-white/10 border border-white/20 text-sm tracking-wide"><i class="fa-solid fa-hands-holding-heart mr-2"></i>Türkiye · Yurt Dışındaki Gurbetçiler &amp; Yerel Avukatlar İçin</p>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">Türkiye'de Yaşlı ve Engelli Bakımı &amp; Vasilik Yönetimi</h1>
+        <p class="mt-6 text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto">Sosyal hizmet alanında 20 yılı aşkın deneyim – Türkiye'deki yaşlı veya engelli yakınlarınızın ve müvekkillerinizin güvenilir biçimde bakım görmesi ve hukuken doğru temsil edilmesi için.</p>
+        <a href="#contact" class="mt-10 inline-flex items-center gap-2 bg-white text-slate-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-slate-200 transition">İletişime Geçin <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </header>
@@ -145,45 +107,42 @@
       <div class="max-w-5xl mx-auto px-6">
         <div class="grid md:grid-cols-5 gap-12 items-center">
           <div class="md:col-span-2 flex justify-center">
-            <div class="relative w-full max-w-xs">
-              <div class="about-photo w-full h-80 rounded-3xl shadow-xl ring-8 ring-brand-50"></div>
-              <div class="absolute -bottom-5 -right-3 w-20 h-20 rounded-full bg-brand-700 text-white flex items-center justify-center text-3xl shadow-lg ring-4 ring-white">
-                <i class="fa-solid fa-hand-holding-heart"></i>
-              </div>
+            <div class="w-56 h-56 rounded-full bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center shadow-xl ring-8 ring-slate-100">
+              <i class="fa-solid fa-hand-holding-heart text-white text-7xl"></i>
             </div>
           </div>
           <div class="md:col-span-3">
             <div class="lang-content active" data-lang="de">
-              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Über mich</h2>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Über mich</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">Mein Name ist Tuncay ERGİN. Ich bin seit 20 Jahren als Sozialarbeits-Spezialist tätig und habe in dieser Zeit hunderte Familien mit älteren und behinderten Angehörigen in schwierigen Lebenssituationen begleitet.</p>
               <p class="text-slate-600 leading-relaxed mb-4">15 Jahre lang war ich als Verantwortlicher Manager eines privaten Pflegezentrums für Menschen mit Behinderungen in der Türkei tätig. Diese Erfahrung hat mir ein tiefes Verständnis für pflegerische, rechtliche und menschliche Bedürfnisse vermittelt.</p>
               <p class="text-slate-600 leading-relaxed">Heute unterstütze ich Expats und lokale Anwälte dabei, sicherzustellen, dass ältere und behinderte Angehörige sowie Mandanten in der Türkei würdevoll, sicher und rechtlich korrekt betreut werden.</p>
             </div>
             <div class="lang-content" data-lang="en">
-              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">About Me</h2>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">About Me</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">My name is Tuncay ERGİN. I have worked as a Social Work Specialist for 20 years, guiding hundreds of families with elderly and disabled relatives through challenging life situations.</p>
               <p class="text-slate-600 leading-relaxed mb-4">For 15 years, I served as Responsible Manager of a private care center for people with disabilities in Turkey. This experience gave me a deep understanding of care, legal, and human needs.</p>
               <p class="text-slate-600 leading-relaxed">Today I support expats and local lawyers in ensuring that elderly and disabled relatives and clients in Turkey receive dignified, safe, and legally correct care.</p>
             </div>
             <div class="lang-content" data-lang="fr">
-              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">À propos de moi</h2>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">À propos de moi</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">Je m'appelle Tuncay ERGİN. Je travaille depuis 20 ans en tant que spécialiste du travail social et j'ai accompagné des centaines de familles ayant des proches âgés ou handicapés dans des situations de vie difficiles.</p>
               <p class="text-slate-600 leading-relaxed mb-4">Pendant 15 ans, j'ai été directeur responsable d'un centre de soins privé pour personnes en situation de handicap en Turquie. Cette expérience m'a apporté une compréhension approfondie des besoins en matière de soins, de droit et d'humanité.</p>
               <p class="text-slate-600 leading-relaxed">Aujourd'hui, j'aide les expatriés et les avocats locaux à garantir que leurs proches âgés ou handicapés, ainsi que leurs clients en Turquie, bénéficient d'une prise en charge digne, sûre et juridiquement conforme.</p>
             </div>
             <div class="lang-content" data-lang="tr">
-              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Hakkımda</h2>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Hakkımda</h2>
               <div class="w-16 h-1 bg-brand-500 rounded mt-3 mb-6"></div>
               <p class="text-slate-600 leading-relaxed mb-4">Adım Tuncay ERGİN. 20 yıldır Sosyal Hizmet Uzmanı olarak görev yapıyorum ve bu süre boyunca zor yaşam koşullarındaki, yaşlı ve engelli yakınları olan yüzlerce aileye rehberlik ettim.</p>
               <p class="text-slate-600 leading-relaxed mb-4">15 yıl boyunca Türkiye'de engelli bireylere hizmet veren özel bir bakım merkezinde Sorumlu Müdür olarak görev yaptım. Bu deneyim bana bakım, hukuk ve insani ihtiyaçlar konusunda derin bir anlayış kazandırdı.</p>
               <p class="text-slate-600 leading-relaxed">Bugün, yurt dışında yaşayan gurbetçilere ve yerel avukatlara, Türkiye'deki yaşlı ve engelli yakınlarının ve müvekkillerinin onurlu, güvenli ve hukuka uygun biçimde bakım görmesini sağlamalarında destek oluyorum.</p>
             </div>
             <div class="mt-8 grid grid-cols-2 gap-4">
-              <div class="bg-brand-50 rounded-xl p-4 text-center">
-                <p class="text-3xl font-bold text-brand-700">20</p>
+              <div class="bg-slate-100 rounded-xl p-4 text-center">
+                <p class="text-3xl font-bold text-slate-900">20</p>
                 <p class="text-sm text-slate-600">
                   <span class="lang-content active" data-lang="de">Jahre Sozialarbeit</span>
                   <span class="lang-content" data-lang="en">Years in Social Work</span>
@@ -191,8 +150,8 @@
                   <span class="lang-content" data-lang="tr">Yıl Sosyal Hizmet</span>
                 </p>
               </div>
-              <div class="bg-brand-50 rounded-xl p-4 text-center">
-                <p class="text-3xl font-bold text-brand-700">15</p>
+              <div class="bg-slate-100 rounded-xl p-4 text-center">
+                <p class="text-3xl font-bold text-slate-900">15</p>
                 <p class="text-sm text-slate-600">
                   <span class="lang-content active" data-lang="de">Jahre Verantwortlicher Manager</span>
                   <span class="lang-content" data-lang="en">Years as Responsible Manager</span>
@@ -207,23 +166,23 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="py-20 services-bg">
+    <section id="services" class="py-20 bg-slate-50">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
           <div class="lang-content active" data-lang="de">
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Meine Leistungen</h2>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Meine Leistungen</h2>
             <p class="mt-3 text-slate-600">Umfassende Unterstützung in der Alten- und Behindertenbetreuung – zuverlässig vor Ort, transparent für Sie.</p>
           </div>
           <div class="lang-content" data-lang="en">
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">My Services</h2>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">My Services</h2>
             <p class="mt-3 text-slate-600">Comprehensive Elderly and Disabled Care support – reliable on the ground, transparent for you.</p>
           </div>
           <div class="lang-content" data-lang="fr">
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Mes services</h2>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Mes services</h2>
             <p class="mt-3 text-slate-600">Un accompagnement complet pour les aînés et les personnes handicapées – fiable sur place, transparent pour vous.</p>
           </div>
           <div class="lang-content" data-lang="tr">
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Hizmetlerim</h2>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Hizmetlerim</h2>
             <p class="mt-3 text-slate-600">Yaşlı ve Engelli Bakımı için kapsamlı destek – sahada güvenilir, sizin için şeffaf.</p>
           </div>
           <div class="w-16 h-1 bg-brand-500 rounded mt-4 mx-auto"></div>
@@ -231,64 +190,64 @@
 
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Card 1 -->
-          <article class="bg-white/95 backdrop-blur rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-brand-500">
-            <div class="w-14 h-14 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-scale-balanced"></i></div>
+          <article class="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-slate-800">
+            <div class="w-14 h-14 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-scale-balanced"></i></div>
             <div class="lang-content active" data-lang="de">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Vormundschaft &amp; Gerichtsmanagement (Alten- und Behindertenfürsorge)</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Vormundschaft &amp; Gerichtsmanagement (Alten- und Behindertenfürsorge)</h3>
               <p class="text-slate-600 leading-relaxed">Professionelle Vorbereitung der obligatorischen jährlichen Vormundschaftskontobücher und Vermögensberichte für türkische Zivilgerichte (Sulh Hukuk Mahkemeleri). Volle Koordination mit Familienanwälten.</p>
             </div>
             <div class="lang-content" data-lang="en">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Legal Guardianship &amp; Court Reporting (Elderly &amp; Disabled)</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Legal Guardianship &amp; Court Reporting (Elderly &amp; Disabled)</h3>
               <p class="text-slate-600 leading-relaxed">Expert preparation of mandatory annual guardianship account books and asset reports required by Turkish Civil Courts (Sulh Hukuk Mahkemeleri). Full coordination with family lawyers.</p>
             </div>
             <div class="lang-content" data-lang="fr">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Gestion de la Tutelle &amp; Rapports Juridiques (Aînés et Handicapés)</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Gestion de la Tutelle &amp; Rapports Juridiques (Aînés et Handicapés)</h3>
               <p class="text-slate-600 leading-relaxed">Préparation experte des rapports annuels de tutelle et des états du patrimoine exigés par les tribunaux civils turcs (Sulh Hukuk Mahkemeleri). Coordination complète avec les avocats.</p>
             </div>
             <div class="lang-content" data-lang="tr">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Vasilik ve Mahkeme Süreçleri Yönetimi (Yaşlı &amp; Engelli)</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Vasilik ve Mahkeme Süreçleri Yönetimi (Yaşlı &amp; Engelli)</h3>
               <p class="text-slate-600 leading-relaxed">Türk Sulh Hukuk Mahkemeleri tarafından talep edilen zorunlu yıllık vasi defterlerinin ve mal varlığı raporlarının uzmanlıkla hazırlanması. Aile avukatlarıyla tam koordinasyon.</p>
             </div>
           </article>
 
           <!-- Card 2 -->
-          <article class="bg-white/95 backdrop-blur rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-brand-500">
-            <div class="w-14 h-14 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-truck-medical"></i></div>
+          <article class="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-slate-800">
+            <div class="w-14 h-14 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-truck-medical"></i></div>
             <div class="lang-content active" data-lang="de">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Medizinische Logistik &amp; Medikamentenverfolgung</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Medizinische Logistik &amp; Medikamentenverfolgung</h3>
               <p class="text-slate-600 leading-relaxed">Strikte Nachverfolgung von Arztterminen, Verwaltung der Krankenhauslogistik, Beschaffung von verschreibungspflichtigen Medikamenten und speziellen medizinischen Geräten.</p>
             </div>
             <div class="lang-content" data-lang="en">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Healthcare Logistics &amp; Medical Tracking</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Healthcare Logistics &amp; Medical Tracking</h3>
               <p class="text-slate-600 leading-relaxed">Strict tracking of medical appointments, managing hospital logistics, sourcing prescription medications, and specialized medical devices (wheelchairs, oxygen concentrators, etc.).</p>
             </div>
             <div class="lang-content" data-lang="fr">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Logistique de Santé &amp; Suivi Médical</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Logistique de Santé &amp; Suivi Médical</h3>
               <p class="text-slate-600 leading-relaxed">Suivi rigoureux des rendez-vous médicaux, gestion de la logistique hospitalière, approvisionnement en médicaments sur ordonnance et dispositifs médicaux spécialisés.</p>
             </div>
             <div class="lang-content" data-lang="tr">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Sağlık Lojistiği ve Tıbbi Bakım Takibi</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Sağlık Lojistiği ve Tıbbi Bakım Takibi</h3>
               <p class="text-slate-600 leading-relaxed">Tıbbi randevuların sıkı takibi, hastane lojistiğinin yönetilmesi, reçeteli ilaçların ve özel tıbbi cihazların (tekerlekli sandalye, oksijen konsantratörü vb.) temini.</p>
             </div>
           </article>
 
           <!-- Card 3 -->
-          <article class="bg-white/95 backdrop-blur rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-brand-500">
-            <div class="w-14 h-14 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-house-chimney-user"></i></div>
+          <article class="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition p-8 border-t-4 border-slate-800">
+            <div class="w-14 h-14 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-house-chimney-user"></i></div>
             <div class="lang-content active" data-lang="de">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Haushaltsmanagement &amp; Offizielle Transaktionen</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Haushaltsmanagement &amp; Offizielle Transaktionen</h3>
               <p class="text-slate-600 leading-relaxed">Komplette Koordination der professionellen Hausreinigung, Instandhaltung, Zahlung von Strom-, Wasser-, Gas- und Internetrechnungen sowie Abwicklung aller offiziellen bürokratischen Behördengänge in der Türkei.</p>
             </div>
             <div class="lang-content" data-lang="en">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Household Management &amp; Official Transactions</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Household Management &amp; Official Transactions</h3>
               <p class="text-slate-600 leading-relaxed">Complete coordination of professional home cleaning, maintenance, utility bill payments (electricity, water, gas, internet), and execution of all official bureaucratic transactions in Turkey.</p>
             </div>
             <div class="lang-content" data-lang="fr">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Gestion Domestique &amp; Transactions Officielles</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Gestion Domestique &amp; Transactions Officielles</h3>
               <p class="text-slate-600 leading-relaxed">Coordination complète du nettoyage professionnel de la maison, de l'entretien, du paiement des factures (électricité, eau, gaz, internet) et gestion de toutes les transactions administratives officielles en Turquie.</p>
             </div>
             <div class="lang-content" data-lang="tr">
-              <h3 class="text-xl font-bold text-brand-900 mb-3">Ev Yönetimi ve Resmi İşlem Takibi</h3>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Ev Yönetimi ve Resmi İşlem Takibi</h3>
               <p class="text-slate-600 leading-relaxed">Profesyonel ev temizliği, bakım-onarım işleri, fatura ödemelerinin (elektrik, su, doğalgaz, internet) eksiksiz koordinasyonu ve Türkiye'deki tüm resmi bürokratik işlemlerin yapılması.</p>
             </div>
           </article>
@@ -296,30 +255,30 @@
       </div>
     </section>
 
-    <!-- CONTACT (no background image) -->
-    <section id="contact" class="py-20 contact-bg">
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 bg-white">
       <div class="max-w-3xl mx-auto px-6">
-        <div class="contact-card text-white rounded-3xl shadow-2xl p-10 sm:p-14 text-center">
-          <div class="w-20 h-20 mx-auto rounded-full bg-white/15 flex items-center justify-center text-3xl mb-6"><i class="fa-solid fa-handshake-angle"></i></div>
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl shadow-2xl p-10 sm:p-14 text-center">
+          <div class="w-20 h-20 mx-auto rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-3xl mb-6"><i class="fa-solid fa-handshake-angle"></i></div>
           <div class="lang-content active" data-lang="de">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold">Kontakt</h2>
-            <p class="mt-4 text-slate-200">Sprechen wir über die Situation Ihrer älteren oder behinderten Angehörigen oder Mandanten. Schreiben Sie mir – ich antworte persönlich.</p>
+            <p class="mt-4 text-slate-300">Sprechen wir über die Situation Ihrer älteren oder behinderten Angehörigen oder Mandanten. Schreiben Sie mir – ich antworte persönlich.</p>
           </div>
           <div class="lang-content" data-lang="en">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold">Contact</h2>
-            <p class="mt-4 text-slate-200">Let's talk about the situation of your elderly or disabled loved ones or clients. Write to me – I will reply personally.</p>
+            <p class="mt-4 text-slate-300">Let's talk about the situation of your elderly or disabled loved ones or clients. Write to me – I will reply personally.</p>
           </div>
           <div class="lang-content" data-lang="fr">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold">Contact</h2>
-            <p class="mt-4 text-slate-200">Parlons de la situation de vos proches âgés ou handicapés, ou de vos clients. Écrivez-moi – je vous répondrai personnellement.</p>
+            <p class="mt-4 text-slate-300">Parlons de la situation de vos proches âgés ou handicapés, ou de vos clients. Écrivez-moi – je vous répondrai personnellement.</p>
           </div>
           <div class="lang-content" data-lang="tr">
             <h2 class="font-serif text-3xl sm:text-4xl font-bold">İletişim</h2>
-            <p class="mt-4 text-slate-200">Yaşlı veya engelli yakınlarınızın ya da müvekkillerinizin durumunu konuşalım. Bana yazın – size bizzat yanıt vereceğim.</p>
+            <p class="mt-4 text-slate-300">Yaşlı veya engelli yakınlarınızın ya da müvekkillerinizin durumunu konuşalım. Bana yazın – size bizzat yanıt vereceğim.</p>
           </div>
 
           <p class="mt-8 text-2xl font-semibold tracking-wide">Tuncay ERGİN</p>
-          <p class="text-brand-100 text-sm">
+          <p class="text-slate-300 text-sm">
             <span class="lang-content active" data-lang="de">Sozialarbeits-Spezialist · Betreuungsmanagement</span>
             <span class="lang-content" data-lang="en">Social Work Specialist · Care Management</span>
             <span class="lang-content" data-lang="fr">Spécialiste du travail social · Gestion des soins</span>
@@ -336,7 +295,7 @@
                 <span class="lang-content" data-lang="tr">WhatsApp Destek</span>
               </span>
             </a>
-            <a href="mailto:shutuncayergin@gmail.com" class="inline-flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-900 text-white font-semibold px-8 py-4 rounded-full shadow-lg border border-slate-600 transition">
+            <a href="mailto:shutuncayergin@gmail.com" class="inline-flex items-center justify-center gap-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg border border-slate-500 transition">
               <i class="fa-solid fa-envelope text-xl"></i>
               <span>
                 <span class="lang-content active" data-lang="de">E-Mail senden</span>
@@ -351,8 +310,8 @@
     </section>
   </main>
 
-  <!-- FOOTER (no background image) -->
-  <footer class="footer-bg text-slate-300 py-8">
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-300 py-8">
     <div class="max-w-6xl mx-auto px-6 text-center text-sm">
       <p>
         &copy; <span id="year">2025</span> Tuncay ERGİN.
